@@ -1,0 +1,60 @@
+<div class="Weather-header">
+    <div style="display: flex;flex-direction: column;justify-content: space-around;width: 50%;">
+        <div >
+            <i class="fas fa fa-map-marker-alt "></i>
+            {{WeatherData.data.request[0].query}}  
+        </div>    
+    </div>
+    <div style="display: flex;flex-direction: column;">
+        <div >
+            {{WeatherData.data.time_zone[0].localtime}}    
+        </div> 
+    </div>
+</div>
+<div class="weatherWidgetRow">
+    <div *ngIf="isDay" class="weatherWidgetRow">
+        <i class="fas fa-3x fa-sun sun"></i>
+        
+    </div>
+    <div *ngIf="!isDay" class="weatherWidgetRow">
+        <i class="fas fa-3x fa-moon moon"></i>
+    </div>
+    <div *ngIf="isCloudy" class="weatherWidgetRow cloudDiv">
+        <i class="fas fa-cloud fa-3x cloud"></i>
+    </div>
+    <div *ngIf="WeatherData.israiny" class="weatherWidgetRow cloudDiv">
+        <i class="fas fa-cloud-rain fa-3x cloud"></i>
+    </div>
+    <div class="weatherWidgetRow" style="font-size: 32px;margin-top: 5px;">
+        {{WeatherData.data.current_condition[0].temp_C}}°    
+    </div>
+    <div class="weatherWidgetRow" style="font-size: 16px;margin-top: 5px;">
+        {{WeatherData.data.current_condition[0].weatherDesc[0].value}}    
+    </div>
+</div>
+<div class="Weather-header" style="margin-top: 10px;">
+<div style="display: flex;flex-direction: column;justify-content: space-around;">
+    <div style="display: flex;flex-direction: column;" >
+       <div>
+        Humidity
+       </div> 
+       {{WeatherData.data.current_condition[0].humidity}}%   
+    </div>    
+</div>
+<div style="display: flex;flex-direction: column;justify-content: space-around;margin: 0 50px;">
+    <div style="display: flex;flex-direction: column;" >
+       <div>
+        Humidity
+       </div> 
+       {{WeatherData.data.current_condition[0].humidity}}%   
+    </div>    
+</div>
+<div style="display: flex;flex-direction: column;justify-content: space-around;">
+    <div style="display: flex;flex-direction: column;" >
+       <div>
+        Humidity
+       </div> 
+       {{WeatherData.data.current_condition[0].humidity}}%   
+    </div>    
+</div>
+</div>

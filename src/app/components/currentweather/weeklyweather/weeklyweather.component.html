@@ -1,0 +1,38 @@
+<div>
+    <div>
+       <h3 style="color:white;text-align: center;">
+        Weekly weather
+       </h3> 
+    </div>
+    <div class="card card-2">
+    
+        <table style="width:100%">
+            <tr>
+                <th>Date</th>
+                <th>Max. Temperature</th>
+                <th>Min. Temperature</th>
+                <th>Avg. Temperature</th>
+                <th>Chance of rain</th>
+            </tr>
+            <tr *ngFor = "let day of WeatherData.data.weather" >
+                <td >
+                  {{day.date}}
+                </td>
+                <td>
+                    {{day.maxtempC}}°
+                </td>
+                <td >
+                    {{day.mintempC}}°
+                </td>
+                <td >
+                    {{day.avgtempC}}°
+                </td>
+                <td>
+                    {{day.hourly[0].chanceofrain}}%
+                </td>
+            </tr>
+           
+           
+          </table>
+        </div>
+</div>
