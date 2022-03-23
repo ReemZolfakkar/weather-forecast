@@ -12,20 +12,20 @@
     </div>
 </div>
 <div class="weatherWidgetRow">
-    <div *ngIf="isDay" class="weatherWidgetRow">
+    <div *ngIf="tConvert()" class="weatherWidgetRow">
         <i class="fas fa-3x fa-sun sun"></i>
-        
     </div>
-    <div *ngIf="!isDay" class="weatherWidgetRow">
+    <div *ngIf="!tConvert()" class="weatherWidgetRow">
         <i class="fas fa-3x fa-moon moon"></i>
     </div>
-    <div *ngIf="isCloudy" class="weatherWidgetRow cloudDiv">
+    <div *ngIf="isCloudy()" class="weatherWidgetRow cloudDiv">
         <i class="fas fa-cloud fa-3x cloud"></i>
     </div>
     <div *ngIf="WeatherData.israiny" class="weatherWidgetRow cloudDiv">
         <i class="fas fa-cloud-rain fa-3x cloud"></i>
     </div>
     <div class="weatherWidgetRow" style="font-size: 32px;margin-top: 5px;">
+        {{WeatherData.isDay}}
         {{WeatherData.data.current_condition[0].temp_C}}°    
     </div>
     <div class="weatherWidgetRow" style="font-size: 16px;margin-top: 5px;">

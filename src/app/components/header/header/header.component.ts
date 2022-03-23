@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit,Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { WeatherserviceService } from 'src/app/weatherservice.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   title = 'weather_forcast';
-  constructor() { }
+  City:any
+  constructor(private _Activatedroute:ActivatedRoute,private _WeatherserviceService:WeatherserviceService) {
+    
+   }
 
   ngOnInit(): void {
+    this._WeatherserviceService.city$
+    .subscribe(data=>this.City=data
+    )
+    
   }
+  
+  
+  
 
 }

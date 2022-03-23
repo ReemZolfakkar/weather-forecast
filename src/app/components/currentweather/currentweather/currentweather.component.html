@@ -1,3 +1,5 @@
+<div class="background">
+  <app-search [Cities]="Cities" [City]="City" (selectedcity)="setselectedcity($event)"></app-search>
 <div class="divWeatherMain" >
         <div style="flex: 1;padding: 5px 20px;">
             <app-nowweather [WeatherData]="WeatherData" >
@@ -8,4 +10,10 @@
 
           </app-todayweather>
         </div>
+
+</div>
+<div style="display: flex;flex-direction: row;justify-content: center;background-color: #080a3e;">
+  <app-weeklyweather [WeatherData]="WeatherData">   
+  </app-weeklyweather>
+</div>
 </div>

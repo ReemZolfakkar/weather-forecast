@@ -1,4 +1,6 @@
 import { Component, OnInit,Input,Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
+import { WeatherserviceService } from 'src/app/weatherservice.service';
 
 @Component({
   selector: 'app-search',
@@ -7,7 +9,7 @@ import { Component, OnInit,Input,Output, EventEmitter } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router,private _WeatherserviceService:WeatherserviceService) { }
   @Input() Cities:any
   @Input() City:any
   @Output() selectedcity=new EventEmitter <string>();
@@ -16,8 +18,9 @@ export class SearchComponent implements OnInit {
   }
   OnCitySelected(val:any)
   {
+    
     this.selectedcity.emit(val)
-    console.log(this.selectedcity.emit(val))
+    this._WeatherserviceService.setcity(this.City)
     
   }
 }

@@ -13,17 +13,20 @@ export class NowweatherComponent implements OnInit {
 
   ngOnInit(): void {
     this.isCloudy()
-    this.tConvert(this.WeatherData.data.time_zone[0].localtime.split(" ",1))
+    this.tConvert()
   }
   isCloudy(){
     if(this.WeatherData.data.current_condition[0].weatherDesc[0].value=='Partly cloudy' || this.WeatherData.data.current_condition[0].weatherDesc[0].value=='Cloudy' ||this.WeatherData.data.current_condition[0].weatherDesc[0].value=='Haze' )
     this.Cloudy=true 
     else 
     this.Cloudy=false
+    return this.Cloudy
   }
-  tConvert (time:any) {
-    time=time.split("0", 1)
-    
+  tConvert () {
+    let t=this.WeatherData.data.time_zone[0].localtime
+    t=t.split(" ")
+    let time=t[1]
+    time=time.split(":",1)
     if (time==" ")
     time="12:00"
     else
@@ -41,14 +44,16 @@ export class NowweatherComponent implements OnInit {
       time = time.slice(1); // Remove full string match value
       time[5] = +time[0] < 12 ? 'AM' : 'PM'; // Set AM/PM
       time[0] = +time[0] % 12 || 12; // Adjust hours
+
     }
     time=time.join(''); // return adjusted time or original string
-    if(time.indexOf('P')!=-1)
+    if(time.indexOf('P')==-1)
     this.isDay=true 
     else 
     this.isDay=false
     return this.isDay
   }
   
+
 
 }
