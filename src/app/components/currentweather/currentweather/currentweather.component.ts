@@ -28,6 +28,8 @@ export class CurrentweatherComponent implements OnInit {
   getCountryandCity(){
     this._WeatherserviceService.getweather(this.City)
     .subscribe(data=>{this.WeatherData=data
+    this._WeatherserviceService.setcity(this.City)
+
     });
   }
   setselectedcity(newcity:string){

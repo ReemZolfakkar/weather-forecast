@@ -1,12 +1,12 @@
 * {
-    box-sizing: border-box;
+    
   }
   
   body {
     margin: 0;
     padding: 0;
     width: 100%;
-    font-family: 'segoe ui';
+    font-family: "Roboto", "Open Sans", sans-serif;
   }
   
   .nav {
@@ -14,6 +14,7 @@
     width: 100%;
     background-color: transparent;
     position: relative;
+    z-index: 5;
   }
   
   .nav > .nav-header {
@@ -67,8 +68,8 @@
       height: 50px;
       padding: 13px;
     }
-    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-      background-color: rgba(0, 0, 0, 0.3);
+    .nav  > label:hover{
+      background-color:rgb(6 5 34);
     }
     .nav > .nav-btn > label > span {
       display: block;
@@ -80,7 +81,8 @@
       position: absolute;
       display: block;
       width: 100%;
-      background-color: #333;
+      color: rgb(6 5 34);
+      background-color: white;
       height: 0px;
       transition: all 0.3s ease-in;
       overflow-y: hidden;

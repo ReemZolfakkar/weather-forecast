@@ -13,10 +13,10 @@
 .todayweather{
     padding: 62px;
 }
-@media  (max-width: 600px){
+@media  (max-width: 1000px){
     .divWeatherMain{
         display: block;
-        width: fit-content;
+        
         height: fit-content;
     }
     .todayweather{

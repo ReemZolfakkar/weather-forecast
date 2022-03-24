@@ -21,6 +21,7 @@ export class WeatherserviceService {
   }
   setcity(val:string){
     this.cityChange.next(val);
+    console.log(val)
   }
   redirecthome(city:string){
     this.router.navigate(['/currentweather',city]);

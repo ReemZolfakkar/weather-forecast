@@ -2,6 +2,7 @@ table, th, td {
     
     border-collapse: collapse;
     text-align: center;
+    font-family: "Roboto", "Open Sans", sans-serif;
     padding: 10px;
   }
   
@@ -13,3 +14,8 @@ table, th, td {
   }
  
 
+@media(max-width:1000px) {
+  table{
+    padding: 4px;
+  }
+}

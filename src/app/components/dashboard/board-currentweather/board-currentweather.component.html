@@ -1,0 +1,49 @@
+<div id="rcorners1">
+    <span>Welcome Back! </span>
+    <p>Check out today's weather information in {{City}}</p>
+    <app-chart></app-chart> 
+    
+    <p>More details of today's weather</p>
+    <div style="text-align: center;font-size: 16px; color: #bfc1c8;">
+        <div style="display: -ms-inline-grid;">
+    <div style="display: inline-flex;flex-direction: row;margin: auto; ">
+    <div style="display: flex;flex-direction: column;justify-content: space-around;">
+        <div style="display: flex;flex-direction: column;" >
+            <div>
+            Temperature
+           </div> 
+           {{WeatherData.data.current_condition[0].temp_C}}° 
+            <div>
+            Wind Speed
+            </div> 
+        {{WeatherData.data.current_condition[0].windspeedKmph}} Km/h 
+        </div>      
+    </div>
+    <div style="display: flex;flex-direction: column;justify-content: space-around;margin: 0 50px;">
+        <div style="display: flex;flex-direction: column;" >
+           <div>
+            Weather Condition
+           </div> 
+           {{WeatherData.data.current_condition[0].weatherDesc[0].value}} 
+           <div>
+            Pressure
+        </div> 
+        {{WeatherData.data.current_condition[0].pressure}}  
+        </div>    
+    </div>
+    <div style="display: flex;flex-direction: column;justify-content: space-around;">
+        <div style="display: flex;flex-direction: column;" >
+             <div>
+            Humidity
+           </div> 
+           {{WeatherData.data.current_condition[0].humidity}}%  
+           <div>
+            UV Index
+        </div> 
+        {{WeatherData.data.current_condition[0].uvIndex}}
+        </div>
+    </div>
+</div>
+</div>
+    </div>
+</div>

@@ -14,9 +14,15 @@ import { SearchComponent } from './components/search/search.component';
 import { WeatherdashboardComponent } from './components/weatherdashboard/weatherdashboard.component';
 import { FormsModule } from '@angular/forms';
 import { CitiesService } from './cities.service';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { BoardCurrentweatherComponent } from './components/dashboard/board-currentweather/board-currentweather.component';
+import { ChartComponent } from './components/dashboard/chart/chart.component';
 const appRoutes:Routes=[
-  {path:`WeatherDashBoard/:city`,component:WeatherdashboardComponent},
+  {path:'WeatherDashBoard/:city',component:WeatherdashboardComponent},
   {path:'currentweather/:city',component:CurrentweatherComponent},
+  
+  
+  
 ]
 @NgModule({
   declarations: [
@@ -27,7 +33,10 @@ const appRoutes:Routes=[
     TodayweatherComponent,
     NowweatherComponent,
     WeeklyweatherComponent,
-    SearchComponent
+    SearchComponent,
+    SidebarComponent,
+    BoardCurrentweatherComponent,
+    ChartComponent
   ],
   imports: [
     FormsModule,

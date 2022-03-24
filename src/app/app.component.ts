@@ -22,6 +22,7 @@ export class AppComponent {
   ngOnInit(){
     this.citysys.getcity().subscribe((data)=>{this.City=data
     this.City=this._WeatherserviceService.redirecthome(this.City.city)
+    this._WeatherserviceService.setcity(this.City.city)
     })
   }
   

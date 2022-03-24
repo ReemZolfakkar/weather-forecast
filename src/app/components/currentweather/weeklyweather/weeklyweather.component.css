@@ -6,7 +6,7 @@ body {
     justify-content: center;
     background-color: white;
     color: #080a3d;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Roboto", "Open Sans", sans-serif;
 }
 
 .container {
@@ -27,6 +27,7 @@ td, th{
     justify-content: center;
     text-align: center;
     padding: 10px;
+    font-family: "Roboto", "Open Sans", sans-serif;
 }
 
 
