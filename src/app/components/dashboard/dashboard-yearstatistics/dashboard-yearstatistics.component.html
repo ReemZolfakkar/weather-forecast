@@ -1,0 +1,33 @@
+<div id="rcorners1">
+    <p>Check out year's weather information</p>
+    <div>
+        <div class="card card-2">
+        
+            <table style="width:100%">
+                <tr>
+                    <th>Month</th>
+                    <th>Absolute Max. Temperature</th>
+                    <th>Avg Min. Temperature</th>
+                    <th>Avg. Daily Rainfall</th>
+                </tr>
+                <tr *ngFor = "let day of data" >
+                    <td >
+                      {{day.name}}
+                    </td>
+                    <td>
+                        {{day.absMaxTemp}}°
+                    </td>
+                    <td >
+                        {{day.avgMinTemp}}°
+                    </td>
+                    <td>
+                        {{day.avgDailyRainfall}}
+                    </td>
+                </tr>
+               
+               
+              </table>
+            </div>
+    </div>
+</div>
+

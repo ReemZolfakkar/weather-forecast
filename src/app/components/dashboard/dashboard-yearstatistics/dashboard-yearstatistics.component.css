@@ -1,4 +1,16 @@
-body {
+#rcorners1 {
+    border-radius: 25px;
+    background: rgb(6 5 34);
+    color: white;
+    padding: 20px; 
+    width: 50%;
+    font-family: "Roboto", "Open Sans", sans-serif;
+    margin-top: 20px !important;
+    height: fit-content;  
+    margin: auto;
+  }
+
+  body {
     min-height: 100vh;
     display: flex;
     width: 100%;
@@ -26,8 +38,12 @@ body {
 td, th{
     justify-content: center;
     text-align: center;
-    padding: 10px;
+    
     font-family: "Roboto", "Open Sans", sans-serif;
+}
+td{
+    white-space: nowrap;
+
 }
 
 
@@ -37,11 +53,7 @@ td, th{
         padding: 1.5rem 1.5rem 1rem 1.5rem
     }
 }
-@media(max-width:767px) {
-    .td,th {
-        font-size: 10px;
-    }
-}
+
 
 .temp {
     font-size: 5rem;
@@ -50,8 +62,14 @@ td, th{
 
 
 
+@media  (max-width: 1000px){
+    #rcorners1{
+        width: 100%;
+        margin-top: 30px !important;
 
+    }
 
+}
 
 
 

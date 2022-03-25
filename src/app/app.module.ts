@@ -17,9 +17,13 @@ import { CitiesService } from './cities.service';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { BoardCurrentweatherComponent } from './components/dashboard/board-currentweather/board-currentweather.component';
 import { ChartComponent } from './components/dashboard/chart/chart.component';
+import { DashboardWeekweatherComponent } from './components/dashboard/dashboard-weekweather/dashboard-weekweather.component';
+import { LinechartComponent } from './components/dashboard/linechart/linechart.component';
+import { DashboardYearstatisticsComponent } from './components/dashboard/dashboard-yearstatistics/dashboard-yearstatistics.component';
 const appRoutes:Routes=[
   {path:'WeatherDashBoard/:city',component:WeatherdashboardComponent},
   {path:'currentweather/:city',component:CurrentweatherComponent},
+  {path:'WeatherDashBoard/WeekWeather/:city',component:DashboardWeekweatherComponent}
   
   
   
@@ -36,7 +40,10 @@ const appRoutes:Routes=[
     SearchComponent,
     SidebarComponent,
     BoardCurrentweatherComponent,
-    ChartComponent
+    ChartComponent,
+    DashboardWeekweatherComponent,
+    LinechartComponent,
+    DashboardYearstatisticsComponent
   ],
   imports: [
     FormsModule,

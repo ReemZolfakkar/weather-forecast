@@ -8,12 +8,30 @@ import { WeatherserviceService } from 'src/app/weatherservice.service';
 })
 export class SidebarComponent implements OnInit {
   City:any;
-  constructor(private _Activatedroute:ActivatedRoute) { }
+  paragraph:number;
+  constructor(private _Activatedroute:ActivatedRoute) {
+      this.paragraph=1;
+   }
 
   ngOnInit(): void {
     this._Activatedroute.paramMap.subscribe(params => { 
       this.City = params.get('city'); 
     });
   }
-
+  onclick(number:any)
+  {
+    if(number==1)
+    {
+      this.paragraph=1;
+    }
+    if(number==2)
+    {
+      this.paragraph=2;
+    }
+    if(number==3)
+    {
+      this.paragraph=3;
+    }
+   
+  }
 }

@@ -1,8 +1,16 @@
-
-<div class="sidebar">
-  <a class="active" [routerLink]="['/WeatherDashBoard',City]">Current Weather</a>
-  <a [routerLink]="['/WeatherDashBoard/WeekWeather',City]">Week Weather</a>
-  <a [routerLink]="['/WeatherDashBoard/YearStatistics',City]">Year statistics</a>
+<div style="display: flex;">
+    <div class="sidebar" style="flex: 1;">
+    <a class="active" id="1" (click)="onclick(1)">Current Weather</a>
+    <a id="2" (click)="onclick(2)">Week Weather</a>
+    <a id="3" (click)="onclick(3)">Year statistics</a>
+    </div>
+    <div *ngIf="paragraph==1" style="width: 100%;">
+            <app-board-currentweather></app-board-currentweather>
+    </div>
+    <div *ngIf="paragraph==2" style="width: 100%; color: aliceblue;">
+        <app-dashboard-weekweather></app-dashboard-weekweather>
+    </div>
+    <div *ngIf="paragraph==3" style="width: 100%; color: aliceblue;">
+        <app-dashboard-yearstatistics></app-dashboard-yearstatistics>
+    </div>
 </div>
-
-
