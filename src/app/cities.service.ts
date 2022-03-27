@@ -10,7 +10,7 @@ export class CitiesService {
   constructor(private http:HttpClient) { }
   getcity():Observable <ICities[]>{
     
-    return this.http.get<ICities[]>(`http://ip-api.com/json`);
+    return this.http.get<ICities[]>(`http://ip-api.com/json/`);
 
   }
  
