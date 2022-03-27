@@ -20,6 +20,7 @@ import { ChartComponent } from './components/dashboard/chart/chart.component';
 import { DashboardWeekweatherComponent } from './components/dashboard/dashboard-weekweather/dashboard-weekweather.component';
 import { LinechartComponent } from './components/dashboard/linechart/linechart.component';
 import { DashboardYearstatisticsComponent } from './components/dashboard/dashboard-yearstatistics/dashboard-yearstatistics.component';
+import { LoaderComponent } from './components/loader/loader.component';
 const appRoutes:Routes=[
   {path:'WeatherDashBoard/:city',component:WeatherdashboardComponent},
   {path:'currentweather/:city',component:CurrentweatherComponent},
@@ -43,7 +44,8 @@ const appRoutes:Routes=[
     ChartComponent,
     DashboardWeekweatherComponent,
     LinechartComponent,
-    DashboardYearstatisticsComponent
+    DashboardYearstatisticsComponent,
+    LoaderComponent
   ],
   imports: [
     FormsModule,

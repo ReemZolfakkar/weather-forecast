@@ -14,9 +14,11 @@ export class CurrentweatherComponent implements OnInit {
   City:any;
   currentcity:any
   Cities:any;
+  loader:any
   ngOnInit(): void {
     this._Activatedroute.paramMap.subscribe(params => { 
       this.City = params.get('city'); 
+      this.loader=false;
       this.getCountryandCity()
   });
   this.citysys.getcity().subscribe((data)=>{
@@ -27,7 +29,9 @@ export class CurrentweatherComponent implements OnInit {
   
   getCountryandCity(){
     this._WeatherserviceService.getweather(this.City)
-    .subscribe(data=>{this.WeatherData=data
+    .subscribe(data=>{
+      this.WeatherData=data
+      this.loader=true
     this._WeatherserviceService.setcity(this.City)
 
     });

@@ -1,4 +1,9 @@
-<div id="rcorners1">
+
+<div  >
+    <div *ngIf="!loader">
+        
+    </div>
+    <div *ngIf="loader" id="rcorners1">
     <span>Welcome Back! </span>
     <p>Check out today's weather information in {{City}}</p>
     <app-chart ></app-chart> 
@@ -43,6 +48,7 @@
         {{WeatherData.data.current_condition[0].uvIndex}}
         </div>
     </div>
+</div>
 </div>
 </div>
     </div>

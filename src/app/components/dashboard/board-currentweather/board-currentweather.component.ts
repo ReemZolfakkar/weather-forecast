@@ -9,6 +9,7 @@ import { WeatherserviceService } from 'src/app/weatherservice.service';
 export class BoardCurrentweatherComponent implements OnInit {
   City:any;
   WeatherData:any;
+  loader:any;
   constructor(private _WeatherserviceService:WeatherserviceService,private _Activatedroute:ActivatedRoute) { 
    
   }
@@ -16,6 +17,7 @@ export class BoardCurrentweatherComponent implements OnInit {
   ngOnInit(): void {
     this._Activatedroute.paramMap.subscribe(params => { 
       this.City = params.get('city'); 
+      this.loader=false;
       this.getCountryandCity()
   });
  
@@ -23,8 +25,9 @@ export class BoardCurrentweatherComponent implements OnInit {
   getCountryandCity(){
     
     this._WeatherserviceService.getweather(this.City)
-    .subscribe((data)=>{this.WeatherData=data
-      console.log(this.WeatherData)
+    .subscribe((data)=>{  
+      this.WeatherData=data
+      this.loader=true
     });
   }
     

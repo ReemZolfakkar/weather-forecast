@@ -15,14 +15,18 @@ export class AppComponent {
   WeatherData:any;
   CountryCode:any;
   Cities:any;
+  loader:any;
   newselectedcity:any;
   constructor(private _WeatherserviceService:WeatherserviceService,private citysys:CitiesService){
 
   }
   ngOnInit(){
+    this.loader=false;
     this.citysys.getcity().subscribe((data)=>{this.City=data
+    this.loader=true
     this.City=this._WeatherserviceService.redirecthome(this.City.city)
     this._WeatherserviceService.setcity(this.City.city)
+    
     })
   }
   

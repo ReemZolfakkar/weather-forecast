@@ -21,8 +21,11 @@
     <div *ngIf="isCloudy()" class="weatherWidgetRow cloudDiv">
         <i class="fas fa-cloud fa-3x cloud"></i>
     </div>
-    <div *ngIf="WeatherData.israiny" class="weatherWidgetRow cloudDiv">
+    <div *ngIf="isRainy()" class="weatherWidgetRow cloudDiv">
         <i class="fas fa-cloud-rain fa-3x cloud"></i>
+    </div>
+    <div *ngIf="isSnowy()" class="weatherWidgetRow cloudDiv">
+        <i class="fas fa-snowflake fa-3x cloud"></i>
     </div>
     <div class="weatherWidgetRow" style="font-size: 32px;margin-top: 5px;">
         {{WeatherData.isDay}}
@@ -33,7 +36,7 @@
     </div>
 </div>
 <div class="Weather-header" style="margin-top: 10px;">
-<div style="display: flex;flex-direction: column;justify-content: space-around;">
+<div style="display: flex;flex-direction: column;justify-content: space-around;text-align: center;">
     <div style="display: flex;flex-direction: column;" >
        <div>
         Humidity
@@ -41,20 +44,20 @@
        {{WeatherData.data.current_condition[0].humidity}}%   
     </div>    
 </div>
-<div style="display: flex;flex-direction: column;justify-content: space-around;margin: 0 50px;">
+<div style="display: flex;flex-direction: column;justify-content: space-around;margin: 0 50px;text-align: center">
     <div style="display: flex;flex-direction: column;" >
        <div>
-        Humidity
+        Wind Speed
        </div> 
-       {{WeatherData.data.current_condition[0].humidity}}%   
+       {{WeatherData.data.current_condition[0].windspeedKmph}} Km/H   
     </div>    
 </div>
-<div style="display: flex;flex-direction: column;justify-content: space-around;">
+<div style="display: flex;flex-direction: column;justify-content: space-around;text-align: center">
     <div style="display: flex;flex-direction: column;" >
        <div>
-        Humidity
+        Pressure
        </div> 
-       {{WeatherData.data.current_condition[0].humidity}}%   
+       {{WeatherData.data.current_condition[0].pressure}} 
     </div>    
 </div>
 </div>

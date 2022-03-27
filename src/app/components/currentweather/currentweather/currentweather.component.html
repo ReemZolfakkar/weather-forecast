@@ -1,4 +1,8 @@
 <div class="background">
+  <div *ngIf="!loader">
+     <app-loader></app-loader>
+  </div>
+  <div  *ngIf="loader">
   <app-search [Cities]="Cities" [City]="City" (selectedcity)="setselectedcity($event)"></app-search>
 <div class="divWeatherMain" >
         <div style="flex: 1;padding: 5px 20px;">
@@ -15,5 +19,6 @@
 <div style="display: flex;flex-direction: row;justify-content: center;background-color: #080a3e;">
   <app-weeklyweather [WeatherData]="WeatherData">   
   </app-weeklyweather>
+</div>
 </div>
 </div>

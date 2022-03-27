@@ -29,19 +29,22 @@ td, th{
     padding: 10px;
     font-family: "Roboto", "Open Sans", sans-serif;
 }
-
+h3{
+    font-family: "Roboto", "Open Sans", sans-serif;
+}
 
 @media(max-width:767px) {
     .card {
         height: auto;
-        padding: 1.5rem 1.5rem 1rem 1.5rem
+        font-size: 9px;
+        padding: 1.5rem 1.5rem 1rem 1.5rem;
+        
+    }
+    td{
+        white-space: nowrap;
     }
 }
-@media(max-width:767px) {
-    .td,th {
-        font-size: 10px;
-    }
-}
+
 
 .temp {
     font-size: 5rem;

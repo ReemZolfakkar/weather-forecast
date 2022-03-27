@@ -1,5 +1,5 @@
 * {
-    
+  font-family: "Roboto", "Open Sans", sans-serif;
   }
   
   body {
@@ -20,7 +20,10 @@
   .nav > .nav-header {
     display: inline;
   }
-  
+  a:visited { 
+    text-decoration: none; 
+    color: rgb(6 5 34); 
+   }
   .nav > .nav-header > .nav-title {
     display: inline-block;
     font-size: 22px;
